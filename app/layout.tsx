@@ -1,18 +1,18 @@
+import { ReactNode } from 'react';
+import { Inter } from 'next/font/google';
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
+
 export const metadata = {
-  title: "Draw & Tell a Story",
-  description: "Kids turn drawings into stories"
+  title: 'Kids Story App',
+  description: 'A fun place for kids to read and enjoy stories!'
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: "system-ui, sans-serif" }}>
-        {children}
-      </body>
+      <body className={`${inter.className} bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 min-h-screen flex items-center justify-center`}>{children}</body>
     </html>
   );
 }
