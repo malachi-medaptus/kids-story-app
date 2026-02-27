@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Playful animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Global Styles */
+body {
+  @apply bg-blue-50 text-gray-800;
+}
+
+h1, h2, h3 {
+  @apply font-bold;
+}
+
+p {
+  @apply mb-4;
+}
